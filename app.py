@@ -26,6 +26,10 @@ THRESHOLD = 0.343      # value we chose with the F2 criterion
 
 app = Flask(__name__)
 
+# added cors for api call 
+from flask_cors import CORS 
+CORS(app)
+
 # ────────────────────────────────────────────────────────────
 # 2. Simple health check endpoint
 # ────────────────────────────────────────────────────────────
