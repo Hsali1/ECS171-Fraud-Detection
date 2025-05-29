@@ -22,7 +22,7 @@ MODEL_PATH = "fraud_detector_v1.joblib"
 pipe = joblib.load(MODEL_PATH)
 
 # Optional: decide here which threshold counts as "fraud"
-THRESHOLD = 0.343      # value we chose with the F2 criterion
+THRESHOLD = 0.806      # value we chose with the F2 criterion
 
 app = Flask(__name__)
 
