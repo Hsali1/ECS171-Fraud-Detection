@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulk Fraud Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen py-8">
+    <!-- Navigation -->
+    <div class="flex justify-center gap-4 mb-6">
+      <a
+        href="index.html"
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+      >
+        Single Prediction
+      </a>
+      <a
+        href="bulk.html"
+        class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
+      >
+        Bulk Prediction
+      </a>
+    </div>
+
+    <!-- Bulk Upload -->
+    <div class="max-w-5xl mx-auto bg-white p-6 rounded-xl shadow">
+      <h1 class="text-2xl font-bold text-blue-600 mb-4 text-center">
+        Bulk Fraud Detection via CSV
+      </h1>
+
+      <div class="mb-4 flex gap-4 items-center">
+        <input
+          type="file"
+          id="csvFile"
+          accept=".csv"
+          class="border px-3 py-2 rounded w-full max-w-md"
+        />
+        <button
+          onclick="uploadCsv()"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Upload & Preview
+        </button>
+      </div>
+
+      <div id="message" class="text-sm mb-4 hidden"></div>
+
+      <div class="overflow-x-auto">
+        <table
+          id="previewTable"
+          class="w-full text-sm table-auto border hidden"
+        >
+          <thead class="bg-gray-200 font-medium"></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="bulk.js"></script>
+  </body>
+</html>
