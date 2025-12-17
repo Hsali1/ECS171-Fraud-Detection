@@ -26,7 +26,7 @@ This document captures **where the model stands today**, what the key numbers me
 | **ROC-AUC** | **0.887** | 0.5 = random, 1.0 = perfect. Our model ranks a random fraud higher than a random legit **88.7%** of the time. |
 | **PR-AUC**  | **0.13** | The fraud prevalence is 1.4% (2878/205011); random PR-AUC ≈ 0.014. We're **~9× better than random** at pushing frauds toward the top. |
 | **Threshold (5% FPR)** | **0.766** | Chosen threshold where only 5% of legit cases are incorrectly flagged. |
-| **Recall (𝑦 = fraud)** | **52.8%** | We catch roughly one half of frauds (improved from 38.9%). |
+| **Recall (𝑦 = fraud)** | **52.8%** | We catch roughly half of all frauds (improved from 38.9%). |
 | **Precision (𝑦 = fraud)** | **13.0%** | About 1 in 8 alerts are true fraud; the rest are false positives. |
 | **False-positive rate** | **5.0%** | Exactly 5% of legit cases incorrectly flagged (by design). |
 | **F₁-Score** | **0.21** | Harmonic mean of precision and recall for fraud class. |
